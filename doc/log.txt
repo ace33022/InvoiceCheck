@@ -1,0 +1,20 @@
+﻿
+
+# http://127.0.0.1:8080/program/INV0002002
+
+# eligrey/FileSaver.js: An HTML5 saveAs() FileSaver implementation(https://github.com/eligrey/FileSaver.js)
+# eligrey/Blob.js: An HTML5 Blob implementation(https://github.com/eligrey/Blob.js)
+# bjornstar/blob-polyfill: An HTML5 Blob implementation(https://github.com/bjornstar/blob-polyfill)
+
+# 財政部稅務入口網(http://invoice.etax.nat.gov.tw/)
+	
+	特獎:同期統一發票收執聯8位數號碼與上列號碼相同者獎金200萬元
+	頭獎:同期統一發票收執聯8位數號碼與上列號碼相同者獎金20萬元
+	二獎:同期統一發票收執聯末7 位數號碼與頭獎中獎號碼末7 位相同者各得獎金4 萬元
+	三獎:同期統一發票收執聯末6 位數號碼與頭獎中獎號碼末6 位相同者各得獎金1 萬元
+	四獎:同期統一發票收執聯末5 位數號碼與頭獎中獎號碼末5 位相同者各得獎金4 千元
+	五獎:同期統一發票收執聯末4 位數號碼與頭獎中獎號碼末4 位相同者各得獎金 1 千元
+	六獎:同期統一發票收執聯末3 位數號碼與頭獎中獎號碼末3 位相同者各得獎金 2 百元
+
+	特別獎:同期統一發票收執聯8位數號碼與上列號碼相同者獎金1,000萬元
+	增開六獎:同期統一發票收執聯末3 位數號碼與上列號碼相同者各得獎金 2 百元

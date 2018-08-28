@@ -1,0 +1,7 @@
+{
+	"main": "nw_main.js",
+	"name": "Invoice Check",
+	"version": "0.0.1",
+	"description": "Invoice Check", 
+	"author": "ace"
+}
