@@ -131,9 +131,9 @@ Configurations.loadJS(Configurations.requirejsFile, function() {
 				function getInvoicePrizeLogsFromGoogleDoc(callback) {
 
 					// 連線到Google Doc取得發票獎項資料。
-					FormUtils.showProgressbar('更新發票獎項資料中，請稍候‧‧‧', 
+					FormUtils.showMarqueebar('更新發票獎項資料中，請稍候‧‧‧', 
 					
-						function(closeProgressbar) {
+						function(closeMarqueebar) {
 					
 							// ID of the Google Spreadsheet
 							var spreadsheetID = '1TylSwUlq5j2dFlDWwmS5bO_X_QfxJ7U3Hmp3t11LQLU';
@@ -152,7 +152,7 @@ Configurations.loadJS(Configurations.requirejsFile, function() {
 
 								if (('localStorage' in window) && (window["localStorage"] != null)) localStorage[localPath + Configurations.webServiceVOPath + 'invoice_prize_logs'] = JSON.stringify(arrInvoicePrizeLogsInitValue);
 							
-								closeProgressbar();
+								closeMarqueebar();
 								
 								if (typeof callback === 'function') callback();
 							});
@@ -162,7 +162,7 @@ Configurations.loadJS(Configurations.requirejsFile, function() {
 				
 				function initEnv() {
 				
-					FormUtils.showProgressbar('初始化資料中，請稍候‧‧‧', function(closeProgressbar) {
+					FormUtils.showMarqueebar('資料處理中，請稍候‧‧‧', function(closeMarqueebar) {
 							
 						requirejs(["tw.ace33022.vo.CodeContrastDetail"], function(CodeContrastDetail) {
 								
@@ -217,7 +217,7 @@ Configurations.loadJS(Configurations.requirejsFile, function() {
 									if (index == (arrInYearMonth.length - 1)) elmOption.attr('selected', 'selected');	// 預設選取當月月份
 								}
 
-								closeProgressbar();
+								closeMarqueebar();
 								
 								jQuery('#' + selInYearMonthId).focus();
 
@@ -476,7 +476,7 @@ Configurations.loadJS(Configurations.requirejsFile, function() {
 						
 						arrInvoicePrizeLogsInitValue.length = 0;
 						
-						getInvoicePrizeLogsFromGoogleDoc();
+						getInvoicePrizeLogsFromGoogleDoc(initEnv);
 					});
 				});
 					
