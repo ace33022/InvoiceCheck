@@ -1,24 +1,23 @@
 /**
  *
- * Invoice Check
- *
- * @description
+ * @description Invoice Check
  *
  * @version 2018/08/05 初始版本。
  *
  * @author ace
  *
- * @see <a href="http://requirejs.org/">RequireJS</a>
+ * @see {@link http://requirejs.org/|RequireJS}
  *
- * @see <a href="http://underscorejs.org/">Underscore.js</a>
- * @see <a href="https://github.com/jashkenas/underscore">jashkenas/underscore: JavaScript's utility _ belt</a>
- * @see <a href="http://backbonejs.org/">Backbone.js</a>
- * @see <a href="https://github.com/jashkenas/backbone">jashkenas/backbone: Give your JS App some Backbone with Models, Views, Collections, and Events</a>
- * @see <a href="https://github.com/jashkenas/backbone/wiki/Tutorials%2C-blog-posts-and-example-sites">Tutorials, blog posts and example sites · jashkenas/backbone Wiki</a>
+ * @see {@link https://jquery.com/|jQuery}
  *
- * @see <a href="https://jquery.com/">jQuery</a>
+ * @see {@link https://getbootstrap.com/|Bootstrap · The most popular HTML, CSS, and JS library in the world.}
  *
- * @see <a href="https://getbootstrap.com/">Bootstrap · The most popular HTML, CSS, and JS library in the world.</a>
+ * @see {@link http://underscorejs.org/|Underscore.js}
+ * @see {@link https://github.com/jashkenas/underscore|jashkenas/underscore: JavaScript's utility _ belt}
+ *
+ * @see {@link http://backbonejs.org/|Backbone.js}
+ * @see {@link https://github.com/jashkenas/backbone|jashkenas/backbone: Give your JS App some Backbone with Models, Views, Collections, and Events}
+ * @see {@link https://github.com/jashkenas/backbone/wiki/Tutorials%2C-blog-posts-and-example-sites|Tutorials, blog posts and example sites · jashkenas/backbone Wiki}
  *
  * @see <a href="https://www.jasny.net/">Jasny · Web development</a>
  * @see <a href="https://www.jasny.net/bootstrap/">Jasny Bootstrap</a>
@@ -28,9 +27,15 @@
  * @see <a href="http://plugins.krajee.com/file-input">Bootstrap File Input - © Kartik</a>
  * @see <a href="http://plugins.krajee.com/file-input/plugin-options">Bootstrap File Input Options - © Kartik</a>
  *
- * @comment
- *
- * @todo
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API|Web Storage API - Web APIs | MDN}
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API|Using the Web Storage API - Web APIs | MDN}
+ * @see {@link https://www.html5rocks.com/en/features/storage|Storage - HTML5 Rocks}
+ * @see {@link https://www.w3schools.com/html/html5_webstorage.asp|HTML5 Web Storage}
+ * @see {@link https://diveintohtml5.info/storage.html|Local Storage - Dive Into HTML5}
+ * @see {@link https://www.html5rocks.com/en/tutorials/offline/storage/|Client-Side Storage - HTML5 Rocks}
+ * @see {@link https://dotblogs.com.tw/jimmyyu/archive/2011/03/27/html5-client-storage.aspx|[HTML5]簡述HTML5的Client端暫存-localStorage/sessionStorage | gipi的學習筆記-經營管理、數據思考、終身學習 - 點部落}
+ * @see {@link https://www.huanlintalk.com/2012/06/html5-web-storage.html|HTML5 Web Storage - Huan-Lin 學習筆記}
+ * @see {@link https://xyz.cinc.biz/2013/01/html5-web-storage.html|XYZ的筆記本: HTML5 Web Storage用法}
  *
  */
 
@@ -227,6 +232,15 @@ Configurations.loadJS(Configurations.requirejsFile, function() {
 					});
 				};
 			
+				if ((location.protocol == 'http:') || (location.protocol == 'https:')) {
+				
+					tag = '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>'
+							+ '<!-- InvoiceCheck -->'
+							+ '<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2244483882494685"	data-ad-slot="7390066670"	data-ad-format="auto" data-full-width-responsive="true"></ins>'
+							+ '<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>';
+					jQuery('body').append(tag);
+				}
+				
 				tag = '<div class="container-fluid" style="padding-top: 5px;">'
 						+	'	 <div class="row">'
 						+	'		 <div class="col-md-offset-1 col-md-10">'
@@ -401,7 +415,7 @@ Configurations.loadJS(Configurations.requirejsFile, function() {
 
 									if (prizeCount == 0) {
 									
-										if ((jQuery('#' + tabInvoiceId + ' > tbody > tr').length != 0) && (jQuery('#' + tabPrizeInvoiceId + ' > tbody > tr').length != 0)) FormUtils.showMessage('可惜，沒有中獎記錄！');
+										if ((jQuery('#' + tabInvoiceId + ' > tbody > tr').length != 0) && (jQuery('#' + tabPrizeInvoiceId + ' > tbody > tr').length != 0)) FormUtils.showMessage('真是遺憾，沒有中獎記錄！');
 									}
 									else {
 									
@@ -452,7 +466,7 @@ Configurations.loadJS(Configurations.requirejsFile, function() {
 											
 											if (prizeCount == 0) {
 								
-												if ((jQuery('#' + tabInvoiceId + ' > tbody > tr').length != 0) && (jQuery('#' + tabPrizeInvoice + ' > tbody > tr').length != 0)) FormUtils.showMessage('可惜，沒有中獎記錄！');
+												if ((jQuery('#' + tabInvoiceId + ' > tbody > tr').length != 0) && (jQuery('#' + tabPrizeInvoiceId + ' > tbody > tr').length != 0)) FormUtils.showMessage('真是遺憾，沒有中獎記錄！');
 											}
 											else {
 									

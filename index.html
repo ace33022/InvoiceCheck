@@ -7,9 +7,8 @@
 <html lang="zh-Hant-TW">
 
   <head>
-	
-		<!-- <base href="/" /> -->
-		<!-- <base href="W:/Tool/Package/LangEnv/Java/apache-tomcat/webapps/ROOT/" /> -->
+
+    <title>發票對獎小幫手</title>
 
     <meta http-equiv="Content-Language" content="zh-tw">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -19,98 +18,45 @@
 
     <meta name="theme-color" content="#ffffff">
 
-		<meta name="robots" content="index,follow">
+    <meta name="robots" content="index,follow">
 
-		<meta name="keywords" content="invoice">
+    <meta name="keywords" content="invoice">
     <meta name="description" content="invoice">
 
     <meta name="author" content="ace33022">
     <meta name="force-login" content="N">
-		
-    <title>發票對獎小幫手</title>
-		
-		<link type="image/png" rel="icon" href="icons/favicon.png" />
 
-		<!--
+    <!-- <base href="/" /> -->
+    <!-- <base href="W:/Tool/Package/LangEnv/Java/apache-tomcat/webapps/ROOT/" /> -->
+
+    <link type="image/png" rel="icon" href="icons/favicon.png" />
+
+    <!--
     <script type="text/javascript" src="javascripts/tw/ace33022/NameSpace.js"></script>
 
     <script type="text/javascript" src="javascripts/tw/ace33022/DefaultConfigurations.js"></script>
-		<script type="text/javascript" src="javascripts/Configurations.js"></script>
-		
-		<script type="text/javascript" src="javascripts/tw/ace33022/RequireJSConfig.js"></script>
-		-->
-		
-		<script type="text/javascript" src="https://ace33022.github.io/tw/ace33022/NameSpace.js"></script>
+    <script type="text/javascript" src="javascripts/Configurations.js"></script>
+
+    <script type="text/javascript" src="javascripts/tw/ace33022/RequireJSConfig.js"></script>
+    -->
+
+    <script type="text/javascript" src="https://ace33022.github.io/tw/ace33022/NameSpace.js"></script>
 
     <script type="text/javascript" src="https://ace33022.github.io/tw/ace33022/DefaultConfigurations.js"></script>
     <script type="text/javascript" src="https://ace33022.github.io/tw/Configurations.js"></script>
-		
+
     <script type="text/javascript" src="https://ace33022.github.io/tw/ace33022/RequireJSConfig.js"></script>
   </head>
 
-	<!--
+  <!--
     --
-    -- 發票對獎
-    --
-    -- @description 發票對獎。
+    -- @description 發票對獎小幫手。
     --
     -- @version 2017/02/23 初始版本。
     --
     -- @author ace
     --
-    -- @see <a href="https://developer.mozilla.org/en-US/docs/Web">Web technology for developers | MDN</a>
-    -- @see <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript | MDN</a>
-		-- @see <a href="https://developer.mozilla.org/en-US/docs/Web/Events">Event reference | MDN</a>
-		-- @see <a href="https://developer.mozilla.org/en-US/docs/Web/API">Web APIs | MDN</a>
-		-- @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API">Web Storage API - Web APIs | MDN</a>
-		-- @see <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Using the Web Storage API - Web APIs | MDN</a>
-    --
-		-- @see <a href="https://jquery.com/">jQuery</a>
-		--
-		-- @see <a href="https://getbootstrap.com/">Bootstrap · The world's most popular mobile-first and responsive front-end framework.</a>
-		--
-		-- @see <a href="https://developers.google.com/">Google Developers</a>
- 		-- @see <a href="https://developers.google.com/sheets/">Sheets  |  Google Developers</a>
-		-- @see <a href="https://developers.google.com/sheets/api/v3/">Overview  |  Sheets API v3  |  Google Developers</a>
-		--
-		-- @see <a href="https://www.html5rocks.com/en/">HTML5 Rocks - A resource for open web HTML5 developers</a>
-		-- @see <a href="https://www.html5rocks.com/en/features/">Features - HTML5 Rocks</a>
-		-- @see <a href="https://www.html5rocks.com/en/features/storage">Storage - HTML5 Rocks</a>
-		--
-		-- @see <a href="https://www.w3schools.com/">W3Schools Online Web Tutorials</a>
-		-- @see <a href="https://www.w3schools.com/html/">HTML Tutorial</a>
-		-- @see <a href="https://www.w3schools.com/html/html5_webstorage.asp">HTML5 Web Storage</a>
-		--
-		-- @see <a href="http://diveintohtml5.info/storage.html">Local Storage - Dive Into HTML5</a>
-		-- @see <a href="http://www.html5rocks.com/en/tutorials/offline/storage/">Client-Side Storage - HTML5 Rocks</a>
-		-- @see <a href="http://html5tutorial.net/tutorials/working-with-html5-localstorage.html">Working with HTML5 localStorage()</a>
-		-- @see <a href="http://www.dotblogs.com.tw/jimmyyu/archive/2011/03/27/html5-client-storage.aspx">[HTML5]簡述HTML5的Client端暫存-localStorage/sessionStorage</a>
-		-- @see <a href="http://huan-lin.blogspot.com/2012/06/html5-web-storage.html">Huan-Lin 學習筆記: HTML5 Web Storage</a>
-		-- @see <a href="http://xyz.cinc.biz/2013/01/html5-web-storage.html">XYZ的筆記本: HTML5 Web Storage用法</a>
-		--
-    -- @see <a href="http://stackoverflow.com/questions/6919236/hide-document-body-on-page-load">javascript - Hide document body on page load - Stack Overflow</a>
-		-- @see <a href="http://stackoverflow.com/questions/6108509/clearing-select-using-jquery">clearing select using jquery - Stack Overflow</a>
-		--
-		-- @see <a href="http://www.vixual.net/blog/archives/31">[轉載]你所想像不到的 JavaScript | Vixual</a>
-		-- @see <a href="https://dotblogs.com.tw/timothy/2012/06/05/72617">[JQuery] 取得 TR 內層 TD 元素值 | Timothy - 點部落</a>
-		--
-		-- @see <a href="https://ctrlq.org/code/20004-google-spreadsheets-json">Get Google Spreadsheets Data as JSON in your Website</a>
-		--
-		-- @see <a href="http://computer.jges.mlc.edu.tw/index.php/css_category/114-bootstrap%E7%9A%84%E8%A1%A8%E5%96%AE">bootstrap的表單</a>
-    --
-    -- @comment
-		--
-		-- @todo
-		--
     -->
 
-  <body>
-		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<!-- ToolGroup -->
-		<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2244483882494685"	data-ad-slot="7390066670"	data-ad-format="auto" data-full-width-responsive="true"></ins>
-		<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-		
-		<!-- <script type="text/javascript" src="nw_inject_end.js"></script> -->
-		<script type="text/javascript" src="nw_inject_end.js"></script>
-  </body>
+  <body></body>
 </html>
